@@ -1,0 +1,128 @@
+تم تعديل الكود وحذف زر "أضف خدمة"، إليك الكود المعدل:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Online</title>
+    <style>
+        body {
+            background-color: white;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header, .footer {
+            background-color: blue;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: black;
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .section a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 5px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .section a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .btn-order {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-order:hover {
+            background-color: darkgreen;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Business Online</h1>
+    </div>
+
+    <!-- قسم الـ Graphic Designer -->
+    <div class="section" id="graphicDesignerSection">
+        <h2>Graphic Designer</h2>
+        <a href="https://www.behance.net/gallery/207254373/social-media-post-design-%28-%29" target="_blank">Rwn</a>
+        <a href="https://www.behance.net/hebamohamed114" target="_blank">Heba</a>
+        <button class="btn-order" onclick="orderNow('Graphic Designer')">اطلب الآن</button>
+    </div>
+
+    <!-- قسم الـ Video Editor -->
+    <div class="section" id="videoEditorSection">
+        <h2>Video Editor</h2>
+        <a href="https://www.behance.net/gannahassan4" target="_blank">Ganna Hassan</a>
+        <button class="btn-order" onclick="orderNow('Video Editor')">اطلب الآن</button>
+    </div>
+
+    <!-- قسم الـ Programmers -->
+    <div class="section" id="programmerSection">
+        <h2>Programmers</h2>
+        <a href="#" target="_blank">Omar Haddad</a>
+        <button class="btn-order" onclick="orderNow('Programmer')">اطلب الآن</button>
+    </div>
+
+    <div class="footer">
+        Contact us: 01211493385
+    </div>
+
+    <script>
+        function orderNow(service) {
+            const whatsappMessage = `تم تقديم طلب لخدمة: ${service}`;
+            const whatsappLink = `https://wa.me/201211493385?text=${encodeURIComponent(whatsappMessage)}`;
+            window.location.href = whatsappLink;  // سيتم نقل المستخدم مباشرة إلى رابط واتساب
+        }
+    </script>
+</body>
+</html>
+```
+
+تم حذف الزر "أضف خدمة" من الكود.
